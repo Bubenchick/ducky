@@ -3,9 +3,10 @@ export interface TeamMember {
   name: string
   department: string
   skills: string[]
-  avatar?: string
-  position?: string
-  email?: string
+  avatar: string
+  position: string
+  email: string
+  bio: string
 }
 
 export type TeamMembersList = TeamMember[]

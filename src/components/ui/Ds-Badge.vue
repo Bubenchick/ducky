@@ -1,3 +1,4 @@
+<!-- TODO add Tagline component -->
 <template>
   <div class="ds-badge">
     <slot></slot>
@@ -12,12 +13,12 @@
   border: 1px solid #c6e1fd;
   color: #4192de;
   display: inline-flex;
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 500;
   justify-content: center;
   max-width: 100%;
   overflow: hidden;
-  padding: 0.25rem 0.75rem;
+  padding: 4px 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

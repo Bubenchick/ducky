@@ -1,33 +1,12 @@
+<!-- TODO add colorHash and initials fallback -->
 <template>
   <div class="ds-avatar">
-    <!-- {{ initials }} -->
     <img v-if="imageUrl" :src="imageUrl" alt="avatar" class="ds-avatar-image" />
   </div>
 </template>
 
 <script lang="ts" setup>
-// import { computed } from 'vue'
-
-interface IProps {
-  // name?: string
-  imageUrl?: string
-}
-
-const props = defineProps<IProps>()
-
-// const initials = computed(() => {
-//   const firstname = props.firstname?.charAt(0)
-//   const lastname = props.lastname?.charAt(0)
-//   const str = `${firstname ?? ''}${lastname ?? ''}`
-
-//   return str.toUpperCase()
-// })
-
-// TODO add colorHash
-// const backgroundColor = computed(() => {
-//   const str = `${props.firstname ?? ''}${props.lastname ?? ''}`
-//   return colorHash.hex(str)
-// })
+defineProps({ imageUrl: { type: String, required: true } })
 </script>
 
 <style scoped>

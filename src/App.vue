@@ -18,4 +18,11 @@ header {
   font-size: 32px;
   padding: 20px 40px;
 }
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 24px;
+    padding: 12px 24px;
+  }
+}
 </style>
