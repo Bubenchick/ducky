@@ -1,3 +1,4 @@
+<!-- Его еще докручивать и докручивать, телепорт, слоты, анимация сейчас убогая, если вдруг вложенные поп-апы то capture -->
 <template>
   <transition name="ds-popup">
     <div
@@ -35,7 +36,7 @@ const handleKeydown = (e: KeyboardEvent) => {
   }
 }
 
-// TODO не нравится, но сейчас не хочется на это тратить время
+// TODO вообще не нравится, но сейчас не хочется на это тратить время
 const lockScroll = () => {
   document.body.style.overflow = 'hidden'
 }

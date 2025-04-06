@@ -1,3 +1,5 @@
+<!-- даже комментировать не хочется, я бы его весь переделал -->
+<!-- + фокус по опциям -->
 <template>
   <div class="ds-dropdown" ref="dropdownRef">
     <DsButton class="ds-dropdown__trigger" kind="ghost" size="md" block @click="toggle">

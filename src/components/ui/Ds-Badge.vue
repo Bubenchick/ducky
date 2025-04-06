@@ -1,4 +1,4 @@
-<!-- TODO add Tagline component -->
+<!-- Добавить разные kind/size/shape + переименовать в DS-Tag и завести обертку DS-Tagline (Подумать нассчет скроллабл) -->
 <template>
   <div class="ds-badge">
     <slot></slot>

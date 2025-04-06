@@ -1,5 +1,5 @@
 import teamMembers from '@/assets/mock/team-members.json'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import { useDebouncedRef } from '@/utils/useDebouncedRef'
@@ -32,9 +32,11 @@ export const useTeamStore = defineStore('team', () => {
   // Можем добавить новые если надо
   const filteredMembers = useFilters(members, [searchFilter, departmentFilter])
 
-  function setDepartment(dept: string) {
-    selectedDepartment.value = dept
-  }
+  const departmentOptions = computed(() => {
+    return [...new Set(members.value.map((member) => member.department))]
+      .filter(Boolean)
+      .map((dep) => ({ label: dep, value: dep }))
+  })
 
   return {
     members,
@@ -42,6 +44,6 @@ export const useTeamStore = defineStore('team', () => {
     searchQuery,
     layout,
     filteredMembers,
-    setDepartment,
+    departmentOptions,
   }
 })

@@ -21,7 +21,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useTeamStore } from '@/stores/teamStore'
 import DsButton from './ui/Ds-Button.vue'
@@ -29,15 +28,9 @@ import DsInput from './ui/Ds-Input.vue'
 import DsDropdown from './ui/Ds-Dropdown.vue'
 
 const store = useTeamStore()
-const { members, layout, searchQuery, selectedDepartment } = storeToRefs(store)
+const { layout, searchQuery, selectedDepartment, departmentOptions } = storeToRefs(store)
 
 const toggleLayout = () => (layout.value = layout.value === 'grid' ? 'list' : 'grid')
-
-const departmentOptions = computed(() => {
-  return [...new Set(members.value.map((member) => member.department))]
-    .filter(Boolean)
-    .map((dep) => ({ label: dep, value: dep }))
-})
 </script>
 
 <style scoped>

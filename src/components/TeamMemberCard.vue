@@ -1,4 +1,5 @@
 <!-- TODO в TeamMemberDetails можно переиспользовать этот компонент если поработать со слотами, но на это нужно время -->
+<!-- Создать DS-Text и использовать для имени/позиции/департамента + Tagline -->
 <template>
   <div class="team-member-card">
     <div class="team-member-card__header">

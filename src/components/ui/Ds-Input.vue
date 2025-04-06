@@ -1,3 +1,4 @@
+<!-- ну тут совсем базовая реализация, TODO хотя бы пост/пре слоты для иконок и кнопок + фокус -->
 <template>
   <div class="ds-input">
     <input v-model="model" class="ds-input__input" type="text" :placeholder />
